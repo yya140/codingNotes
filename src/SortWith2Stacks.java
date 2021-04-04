@@ -35,9 +35,8 @@ public class SortWith2Stacks {
                 }
             }
 
-            while (count > 0){
+            while (count-- > 0){
                 buffer.offerFirst(globalMin);
-                count--;
             }
         }
 
@@ -47,14 +46,30 @@ public class SortWith2Stacks {
         }
     }
 
-    public static void main(String[] arg){
-         LinkedList<Integer> test = new LinkedList<>();
-         test.add(3);
-         test.add(1);
-         test.add(0);
-         test.add(4);
-         test.add(6);
-         sort(test);
-         System.out.println(test.toString());
+    public static void main(String[] args){
+        LinkedList<Integer> input = new LinkedList<>();
+        input.add(8);
+        input.add(2);
+        input.add(3);
+        input.add(9);
+
+        int size = input.size();
+        for (int i = 0; i < size; i++){
+            System.out.println(input.pollLast());
+        }
+
+
+
+        LinkedList<Integer> input1 = new LinkedList<>();
+        input1.add(8);
+        input1.add(2);
+        input1.add(3);
+        input1.add(9);
+        sort(input1);
+        int size1 = input1.size();
+        for (int i = 0; i < size1; i++){
+            System.out.println(input1.pollLast());
+        }
     }
+
 }
